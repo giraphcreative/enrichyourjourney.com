@@ -1,0 +1,313 @@
+
+
+// color variables
+$grey: #414042;
+$blue: #0783C1;
+$teal: #00B5AA;
+$green: #66BD5A;
+$lime: #CADD65;
+
+
+@import "reset";
+
+@import "fonts";
+
+@import "mixins";
+
+@import "base";
+
+@import "grid";
+
+
+
+// background-container
+.container {
+	background: white;
+
+	@include respond-to( 1024px ) {
+		max-width: 960px;
+		margin: 40px auto;
+		box-shadow: 5px 5px 20px #ccc;
+	}
+}
+
+
+// header styles
+header {
+	position: relative;
+	background: $blue url(../img/bg-header.jpg) top center repeat-x;
+	text-align: center;
+
+	img {
+		display: block;
+	}
+}
+
+
+.subheader {
+	background: $blue;
+	border-top: 10px solid $teal;
+	padding: 20px;
+	text-align: center;
+
+	@include respond-to( 600px ) {
+		padding: 30px;
+	}
+}
+
+
+// wrap div
+.wrap {
+	max-width: 1100px;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix;
+}
+
+
+
+.header-right {
+	display: block;
+	margin: 0 auto;
+
+	@include respond-to( 600px ) {
+		float: right;
+		max-width: 45%;
+		margin-right: 5%;
+	}
+}
+
+.header-left {
+	@include respond-to( 600px ) {
+		float: left;
+		max-width: 45%;
+	}
+}
+
+
+
+// padding div that'll resize for larger screens.
+.pad {
+	padding: 30px 20px;
+	@include respond-to( 768px ) { padding: 30px 50px; }
+	@include respond-to( 1025px ) { padding: 40px 70px; }
+	
+	p {
+		padding: 10px 0;
+		@include respond-to( 600px ) {
+			padding: 20px 0;
+		}
+	}
+
+	.bubble {
+		display: block;
+		margin: 10px auto;
+
+		@include respond-to( 600px ) { 
+			float: left;
+			width: 50%; 
+		}
+		@include respond-to( 768px ) { 
+			width: 33.3333%
+		}
+	}
+
+}
+
+
+
+.intro {
+	background: white url(img/bg-road.png) bottom center no-repeat;
+	background-size: cover;
+	color: black;
+
+	.coupon {
+		margin: 10px 0;
+
+		@include respond-to( 600px ) {
+			max-width: 45%;
+			margin: 10px 1%;
+		}
+	}
+}
+
+
+
+// tool styles
+.calculator {
+	color: white;
+	@include font-title;
+	background: white url(../img/bg-map-one.png) top center no-repeat;
+	padding-bottom: 40px;
+
+	.inner {
+		background: $blue url(../img/bg-map-one.png) top center no-repeat;
+		padding: 25px 0;
+	}
+
+	button, input[type=submit], .btn {
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+	@include respond-to( 768px ) { 
+		margin-top: 30px;
+		border-radius: 20px;
+		font-size: 1.2em;
+
+		img {
+			margin-top: 20px;
+		}
+	}
+}
+
+
+
+// explore
+.explore {
+	background: white url(../img/bg-map-two.png) top center no-repeat;
+	padding-bottom: 40px;
+	color: white;
+
+	.inner {
+		background: $teal url(../img/bg-map-two.png) top center no-repeat;
+		padding: 25px 0;
+		
+		@include respond-to( 768px ) {
+			.header-right {
+				float: left;
+			}
+		}
+	}
+}
+
+
+
+
+.pad {
+	padding: 20px;
+
+	@include respond-to( 600px ) {
+		padding: 20px 40px;
+	}
+
+	@include respond-to( 960px ) {
+		padding: 20px 60px;
+	}
+}
+
+
+
+// button styles
+input[type=submit], button, .btn {
+	@include font-title;
+	padding: 15px;
+	background: $green;
+	color: white;
+	border: 0;
+	border-radius: 10px;
+	font-size: 2em;
+	line-height: 1.4em;
+	text-transform: uppercase;
+	display: block;
+	width: 90%;
+	cursor: pointer;
+	text-align: center;
+	position: relative;
+	margin: 10px auto;
+	box-shadow: 3px 3px 25px lighten( $grey, 35% );
+
+	span {
+		display: block;
+		font-size: 1.4em;
+	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		width: 30px;
+		height: 30px;
+		margin-top: -15px;
+	}
+
+	&:hover {
+		opacity: .9;
+		color: white;
+	}
+
+	&.go-back {
+		background: lighten( $grey, 20% );
+		font-size: 1.5em;
+		color: white;
+	}
+
+	&.calculate, &.apply {
+		background: $green url(../img/bg-button-gradient.png) bottom center repeat-x;
+	}
+
+	@include respond-to( 768px ) {
+		max-width: 40%;
+		margin: 30px auto;
+	}
+}
+
+
+
+// footer styles
+.footer-bar {
+	padding: 20px;
+	text-align: center;
+	border-top: 20px solid $grey;
+
+	&, a {
+		color: white;
+	}
+
+	h2, h3 {
+		@include font;
+	}
+
+	h2, a {
+		font-size: 2.4em;
+		line-height: 50px;
+		text-transform: uppercase;
+	}
+
+	h4 {
+		font-size: 17px;
+		@include respond-to( 800px ) { font-size: 26px; }
+	}
+
+	.sixty, .fourty {
+		text-align: center;
+	}
+
+	@include respond-to( 768px ) {
+		padding: 40px;
+	}
+
+	.half.separator {
+		@include respond-to( 768px ) {
+			width: 46.5%;
+		}
+	}
+}
+
+
+
+.fine-print {
+	background: #f5f5f5;
+	color: #999;
+	padding: 20px;
+	font-size: .85em;
+	line-height: 1.3em;
+	text-align: left;
+
+	img {
+		float: right;
+		margin: 0 0 15px 15px;
+	}
+}
+
