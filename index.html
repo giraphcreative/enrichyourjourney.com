@@ -24,24 +24,25 @@
 			<div class="group text-center pad">
 				<p>At Statewide Federal Credit Union, we’re here to help you save more along life’s journey so you have more for the memories that matter.</p>
 				<p>Since we're not-for-profit, we get to focus on what's most important - YOU! That means lower loan rates, higher savings yields and good, ole fashioned friendly service. Here are just a couple ways we can make your life’s journey a little richer:</p>
-				<img src="img/coupon-discover.png" alt="" class="coupon">
-				<img src="img/coupon-explore.png" alt="" class="coupon">
+				<a href="#discover"><img src="img/coupon-discover.png" alt="" class="coupon" border=0></a>
+				<a href="#explore"><img src="img/coupon-explore.png" alt="" class="coupon" border=0></a>
 			</div>
 		</div>
 
-
+	
+		<a name="discover"></a>
 		<div class="calculator">
 			<div class="inner">
 				<img src="img/header-calculator.png" class="header-left">
 				<img src="img/rate.png" class="header-right">
 				<div class="pad group">
 					<div class="half">
-						<p><label for="amount">your balance</label><input type="text" placeholder="7,500" class="amount" /></p>
-						<p><label for="rate">your rate</label><input type="text" placeholder="8.99" class="rate percent" /></p>
+						<p><label for="amount">loan amount</label><input type="text" placeholder="$7,500" class="amount" value="$7,500" /></p>
+						<p><label for="rate">loan rate</label><input type="text" placeholder="8.99" class="rate percent" value="8.99" /></p>
 						<input type="hidden" class="rate_compare" value="1.99" />
 					</div>
 					<div class="half">
-						<p><label for="term">your term</label>
+						<p><label for="term">loan term</label>
 							<select class="term">
 								<option value="12m">12 mo.</option>
 								<option value="24m">24 mo.</option>
@@ -54,19 +55,32 @@
 						</p>
 					</div>
 				</div>
+				<div class="pad text-center">
+					<h4>Congratulations!<br>
+					You could save $<span class="result"></span> on your auto loan!<br>
+					Plus, enjoy 90 days no payments!</h4>
+					<a href="https://www.statewidefcu.org/borrow/apply.aspx"><img src="img/button-apply.png" border=0></a>
+				</div>
 			</div>
 		</div>
 
 
+		<a name="explore"></a>
 		<div class="explore">
 			<div class="inner">
 				<img src="img/header-explore.png" class="header-left">
 				<img src="img/header-checking.png" class="header-right">
-				<div class="pad group">
+				<div class="pad">
 					<p>Are you paying a bank each month to let you have a checking account there? If you have your checking account at a bank, you are most likely paying hundreds a year in gotcha fees. That’s why we make checking simple, easy and free! Here are just a few perks you’ll enjoy:</p>
-					<img src="img/bubble-atms.png" alt="" class="bubble">
-					<img src="img/bubble-mobile.png" alt="" class="bubble">
-					<img src="img/bubble-move.png" alt="" class="bubble">
+					<div class="group">
+						<img src="img/bubble-atms.png" alt="" class="bubble">
+						<img src="img/bubble-mobile.png" alt="" class="bubble">
+						<img src="img/bubble-move.png" alt="" class="bubble">
+					</div>
+					<div class="text-center">
+						<p>No Minimum Balance &bull; No monthly service fee &bull; Free Online Bill Pay and More!</p>
+						<a href="https://www.statewidefcu.org/products_and_services/checking_accounts/free_checking.aspx"><img src="img/button-learn.png" border=0></a>
+					</div>
 				</div>
 			</div>
 		</div>
