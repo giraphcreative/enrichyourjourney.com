@@ -138,7 +138,7 @@ header {
 	color: white;
 	@include font-title;
 	background: white url(../img/bg-map-one.png) top center no-repeat;
-	padding-bottom: 40px;
+	padding-bottom: 50px;
 
 	.inner {
 		background: $blue url(../img/bg-map-one.png) top center no-repeat;
@@ -166,7 +166,7 @@ header {
 // explore
 .explore {
 	background: white url(../img/bg-map-two.png) top center no-repeat;
-	padding-bottom: 40px;
+	padding-bottom: 50px;
 	color: white;
 
 	.inner {
